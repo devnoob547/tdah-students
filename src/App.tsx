@@ -42,8 +42,8 @@ function App() {
           </div>
         </div>
         <div className='my-6 bg-zinc-100 max-w-sm p-4 rounded-lg shadow-lg shadow-zinc-200 md:max-w-5xl'>
-          <h2 className='text-lg font-semibold text-blue-800'>2. Como manter o foco do aluno com TDAH nas aulas</h2>
-          <div className='m-4 text-zinc-700'>
+          <h2 className='text-lg font-semibold text-blue-800 ml-4'>2. Como manter o foco do aluno com TDAH nas aulas</h2>
+          <div className='my-4 mx-6 text-zinc-700'>
             <p>É realmente muito complicado lidar com TDAH na sala de aula, por motivos como barulhos, falatórios e muitas coisas que chamam atenção, fazendo perder o foco, mas com estratégias certas é possível fazer com que o aluno com transtorno tenha um desenvolvimento de forma mais leve e simples</p>
             <div>
               <p className='font-semibold mt-4'>5 formas de fazer o aluno com TDAH ter foco nas aulas:</p>
@@ -151,6 +151,8 @@ function App() {
             </div>
           </div>
         </div>
+        <footer className='mt-8 text-zinc-600'>by <a href="https://github.com/devnoob547/" target="_blank" className='font-semibold text-blue-500 hover:text-blue-600 transition-colors'>devnoob547</a> (Daniel Alves) 💙</footer>
+
       </section>
     </>
   )
