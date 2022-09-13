@@ -1,10 +1,12 @@
 import { useState } from 'react'
+import logo from './assets/logo.jpeg';
 
 function App() {
   return (
     <>
-      <section className='flex items-center justify-center p-28 md:p-40 bg-gradient-to-tr from-cyan-500 to-blue-600 text-slate-100'>
-        <h1 className='text-lg'>TDAH Students</h1>
+      <section className='flex items-center justify-center p-28 md:p-40 bg-no-repeat bg-[#006484] text-slate-100'>
+        <img src={logo} alt="Logo" className='w-40' />
+        <h1 className='text-lg z-40'>TDAH Students</h1>
       </section>
       <section className='flex flex-col justify-center items-center p-10 text-sm md:p-20 md:text-base'>
         <div className='bg-zinc-100 p-4 max-w-sm rounded-lg shadow-lg shadow-zinc-200 md:p-8 md:max-w-5xl'>
