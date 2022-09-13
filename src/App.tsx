@@ -1,15 +1,41 @@
 import { useState } from 'react'
+import { List } from 'phosphor-react';
+import { Popover, Transition } from '@headlessui/react';
+
 import logo from './assets/logo.jpeg';
 
 function App() {
   return (
     <>
+      <header className='p-6 bg-[#006484] text-white'>
+        <Popover className='relative'>
+          <Popover.Button>
+            <List size={32} />
+          </Popover.Button>
+            <Transition
+              enter="transition duration-100 ease-out"
+              enterFrom="transform scale-95 opacity-0"
+              enterTo="transform scale-100 opacity-100"
+              leave="transition duration-75 ease-out"
+              leaveFrom="transform scale-100 opacity-100"
+              leaveTo="transform scale-95 opacity-0"
+            >
+            <Popover.Panel  className='bg-white max-w-md rounded-lg text-black p-4 flex flex-col gap-4'>
+              <a href="#one" className='hover:bg-zinc-300 p-4 rounded-lg transition-all'>Como identificar alunos com TDAH?</a>
+              <a href="#two" className='hover:bg-zinc-300 p-4 rounded-lg transition-all'>Como manter o foco do aluno com TDAH nas aulas?</a>
+              <a href="#three" className='hover:bg-zinc-300 p-4 rounded-lg transition-all'>Como o aluno com TDAH pode estudar sozinho?</a>
+              <a href="#four" className='hover:bg-zinc-300 p-4 rounded-lg transition-all'>Provas adaptadas</a>
+              <a href="#five" className='hover:bg-zinc-300 p-4 rounded-lg transition-all'>Auxílio na busca do futuro</a>
+            </Popover.Panel>
+          </Transition>
+        </Popover>
+      </header>
       <section className='flex items-center justify-center p-28 md:p-40 bg-no-repeat bg-[#006484] text-slate-100'>
         <img src={logo} alt="Logo" className='w-40' />
         <h1 className='text-lg z-40'>TDAH Students</h1>
       </section>
       <section className='flex flex-col justify-center items-center p-10 text-sm md:p-20 md:text-base'>
-        <div className='bg-zinc-100 p-4 max-w-sm rounded-lg shadow-lg shadow-zinc-200 md:p-8 md:max-w-5xl'>
+        <div className='bg-zinc-100 p-4 max-w-sm rounded-lg shadow-lg shadow-zinc-200 md:p-8 md:max-w-5xl' id='one'>
           <h2 className='text-lg font-semibold text-blue-800'>1. Como identificar alunos com TDAH?</h2>
           <div className='m-2 md:m-4 text-zinc-700'>
             <p>Os sintomas de TDAH tem 3 níveis, sendo eles: Baixo, Médio e Superior.</p>
@@ -43,8 +69,8 @@ function App() {
             <p className='mt-4'>É possível se destacar crianças com mais de 6 meses, com sintomas de tdah que podem ser considerados: leve, moderado, ou grave</p>
           </div>
         </div>
-        <div className='my-6 bg-zinc-100 max-w-sm p-4 rounded-lg shadow-lg shadow-zinc-200 md:max-w-5xl'>
-          <h2 className='text-lg font-semibold text-blue-800 ml-4'>2. Como manter o foco do aluno com TDAH nas aulas</h2>
+        <div className='my-6 bg-zinc-100 max-w-sm p-4 rounded-lg shadow-lg shadow-zinc-200 md:max-w-5xl' id='two'>
+          <h2 className='text-lg font-semibold text-blue-800 ml-4'>2. Como manter o foco do aluno com TDAH nas aulas?</h2>
           <div className='my-4 mx-6 text-zinc-700'>
             <p>É realmente muito complicado lidar com TDAH na sala de aula, por motivos como barulhos, falatórios e muitas coisas que chamam atenção, fazendo perder o foco, mas com estratégias certas é possível fazer com que o aluno com transtorno tenha um desenvolvimento de forma mais leve e simples</p>
             <div>
@@ -59,8 +85,8 @@ function App() {
             </div>
           </div>
         </div>
-        <div className='bg-zinc-100 p-4 max-w-sm rounded-lg shadow-lg shadow-zinc-200 md:p-8 md:max-w-5xl'>
-          <h2 className='text-lg font-semibold text-blue-800'>3. Como o aluno com TDAH pode estudar sozinho</h2>
+        <div className='bg-zinc-100 p-4 max-w-sm rounded-lg shadow-lg shadow-zinc-200 md:p-8 md:max-w-5xl' id='three'>
+          <h2 className='text-lg font-semibold text-blue-800'>3. Como o aluno com TDAH pode estudar sozinho?</h2>
           <div className='m-4 text-zinc-700'>
             <p>Todos os alunos ao chegar em certo ponto de seu nível estudantil começam a sentir o peso de uma responsabilidade quanto aos estudos, isso se intensifica ainda mais em se tratando de alunos quem têm TDAH, devido transtorno, o prestar atenção aos estudo em casa se torna um esforço muito grande, visto que, não tem ninguém que o apoie ou ajude no momento muitas vezes.</p>
             <div>
@@ -75,7 +101,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className='my-6 bg-zinc-100 p-4 max-w-sm rounded-lg shadow-lg shadow-zinc-200 md:p-8 md:max-w-5xl'>
+        <div className='my-6 bg-zinc-100 p-4 max-w-sm rounded-lg shadow-lg shadow-zinc-200 md:p-8 md:max-w-5xl' id='four'>
           <h2 className='text-lg font-semibold text-blue-800'>4. Provas adaptadas</h2>
           <div className='m-4 text-zinc-700'>
             <div className='m-4 text-zinc-700'>
@@ -93,7 +119,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className='bg-zinc-100 p-4 max-w-sm rounded-lg shadow-lg shadow-zinc-200 md:p-8 md:max-w-5xl'>
+        <div className='bg-zinc-100 p-4 max-w-sm rounded-lg shadow-lg shadow-zinc-200 md:p-8 md:max-w-5xl' id='five'>
           <h2 className='text-lg font-semibold text-blue-800'>5. Auxílio na busca do futuro</h2>
           <div className='m-2 md:m-4 text-zinc-700'>
             <div className='m-2 md:m-4 text-zinc-700'>
